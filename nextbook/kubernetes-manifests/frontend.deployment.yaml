@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextbook-frontend
+  labels:
+    app: nextbook
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextbook
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: nextbook
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: nextbook-frontend
+        ports:
+        - name: http-server
+          containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: NEXTBOOK_API_ADDR
+          value: nextbook-backend:8080

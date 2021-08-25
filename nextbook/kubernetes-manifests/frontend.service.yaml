@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextbook-frontend
+  labels:
+    app: nextbook
+    tier: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: nextbook
+    tier: frontend
+  ports:
+  - port: 80
+    targetPort: http-server

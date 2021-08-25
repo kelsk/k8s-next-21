@@ -1,0 +1,18 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Google Inc.",
+  "description": "Demo app for k8s best practices",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --inspect=9229 app.js "
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "moment": "2.29.1",
+    "pug": "3.0.2"
+  }
+}

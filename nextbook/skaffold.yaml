@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta4
+kind: Config
+build:
+  artifacts:
+  - image: nextbook-backend
+    context: src/backend
+  - image: nextbook-frontend
+    buildpack:
+      builder: "gcr.io/buildpacks/builder:v1"
+    context: src/frontend
+deploy:
+  kubectl:
+    manifests:
+    - ./kubernetes-manifests/*.service.yaml
+    - ./kubernetes-manifests/*.deployment.yaml
