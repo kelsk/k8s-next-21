@@ -6,7 +6,7 @@ build:
     context: src/backend
   - image: nextbook-frontend
     buildpack:
-      builder: "gcr.io/buildpacks/builder:v1"
+      builder: gcr.io/buildpacks/builder:v1
     context: src/frontend
 deploy:
   kubectl:
