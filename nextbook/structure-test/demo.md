@@ -6,7 +6,7 @@ To add container structure tests to the Nextbook app:
 1. Download the latest container-structure-test [binary](https://github.com/GoogleContainerTools/container-structure-test/releases).
 
 
-2. Add the snippet below to `skaffold.yaml` to run the container structure tests.
+2. Run Nextbook using the `prod` skaffold profile to run the container structure tests.
 
     ```
     test:
@@ -18,4 +18,4 @@ To add container structure tests to the Nextbook app:
           - ./structure-test/backend-test.yaml
     ```
 
-🚨 **Expected failure:** The [frontend](./frontend-test.yaml) structure test contains a `fileContentTest` which looks for `console.log` statements in `app.js`. This test should fail since several `console.log` statements exist in the file, and consequently the container won't be deployed.
+🚨 **Expected failure:** The [frontend](./frontend-test.yaml) structure test contains a `fileContentTest` which looks for `xxx` or `XXX` statements in `app.js`. This test should fail since a comment with `XXX` exists, and consequently the container won't be deployed.

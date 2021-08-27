@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// #XXX: This comment causes the container structure test to fail.
+
 const express = require('express')
 const path = require('path');
 const app = express();

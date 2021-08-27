@@ -11,4 +11,4 @@ fileContentTests:
   - name: 'Lint app.js console.log statements'
     path: 'workspace/app.js'
     expectedContents: ['']
-    excludedContents: ['console.log']
+    excludedContents: ['(xxx|XXX)']

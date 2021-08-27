@@ -13,3 +13,12 @@ deploy:
     manifests:
     - ./kubernetes-manifests/*.service.yaml
     - ./kubernetes-manifests/*.deployment.yaml
+profiles:
+  - name: prod
+    test:
+      - image: nextbook-backend
+        structureTests: 
+          - ./structure-test/backend-test.yaml
+      - image: nextbook-frontend
+        structureTests:
+          - ./structure-test/frontend-test.yaml
