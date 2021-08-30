@@ -4,6 +4,9 @@ build:
   artifacts:
   - image: nextbook-backend
     context: src/backend
+    sync:
+      infer:
+        - '*.py'
   - image: nextbook-frontend
     buildpack:
       builder: gcr.io/buildpacks/builder:v1
