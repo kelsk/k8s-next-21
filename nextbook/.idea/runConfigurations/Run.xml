@@ -12,11 +12,12 @@
     <option name="deployToCurrentContext" value="false" />
     <option name="deployToMinikube" value="false" />
     <option name="envVariables" />
-    <option name="imageRepositoryOverride" value="gcr.io/krippaehne-project" />
-    <option name="kubernetesContext" value="gke_krippaehne-project_us-central1-c_cluster-1" />
+    <option name="imageRepositoryOverride" />
+    <option name="kubernetesContext" value="gke_abbycar-project_us-east1-b_test-cluster" />
     <option name="mappings">
       <list />
     </option>
+    <option name="moduleDeploymentType" value="DEPLOY_EVERYTHING" />
     <option name="projectPathOnTarget" />
     <option name="redeployOnChanges" value="false" />
     <option name="resourceDeletionTimeoutMins" value="2" />
@@ -24,8 +25,12 @@
       <list />
     </option>
     <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+    <option name="skaffoldModules">
+      <list />
+    </option>
     <option name="skaffoldNamespace" />
     <option name="skaffoldProfile" value="prod" />
+    <option name="skaffoldWatchMode" value="ON_DEMAND" />
     <option name="statusCheck" value="true" />
     <option name="verbosity" value="WARN" />
     <method v="2" />
