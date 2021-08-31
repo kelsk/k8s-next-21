@@ -8,7 +8,7 @@
         <option value="BUILDPACKS" />
       </set>
     </option>
-    <option name="cleanupDeployments" value="true" />
+    <option name="cleanupDeployments" value="false" />
     <option name="deployToCurrentContext" value="false" />
     <option name="deployToMinikube" value="false" />
     <option name="envVariables" />
