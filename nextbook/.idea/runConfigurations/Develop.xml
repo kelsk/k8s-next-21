@@ -19,6 +19,7 @@
     </option>
     <option name="moduleDeploymentType" value="DEPLOY_EVERYTHING" />
     <option name="projectPathOnTarget" />
+    <option name="redeployOnChanges" value="true" />
     <option name="resourceDeletionTimeoutMins" value="2" />
     <option name="selectedOptions">
       <list />
@@ -28,7 +29,7 @@
       <list />
     </option>
     <option name="skaffoldNamespace" />
-    <option name="skaffoldProfile" />
+    <option name="skaffoldProfile" value="dev" />
     <option name="skaffoldWatchMode" value="DEPLOY_ON_CHANGES" />
     <option name="statusCheck" value="true" />
     <option name="verbosity" value="WARN" />

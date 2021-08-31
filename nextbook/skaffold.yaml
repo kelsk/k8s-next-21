@@ -4,19 +4,33 @@ build:
   artifacts:
   - image: nextbook-backend
     context: src/backend
-    sync:
-      infer:
-      - '*.py'
+    docker:
+      dockerfile: Dockerfile
+      target: prod
   - image: nextbook-frontend
     context: src/frontend
-    buildpacks:
+    buildpack:
       builder: gcr.io/buildpacks/builder:v1
 deploy:
   kubectl:
     manifests:
-    - ./kubernetes-manifests/*.service.yaml
-    - ./kubernetes-manifests/*.deployment.yaml
+    - ./kubernetes-manifests/*.yaml
 profiles:
+- name: dev
+  build:
+    artifacts:
+    - image: nextbook-backend
+      context: src/backend
+      docker:
+        dockerfile: Dockerfile
+        target: dev
+      sync:
+        infer:
+        - '*.py'
+    - image: nextbook-frontend
+      context: src/frontend
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
 - name: prod
   test:
   - image: nextbook-backend
