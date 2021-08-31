@@ -6,7 +6,7 @@
   "description": "Demo app for k8s best practices",
   "main": "app.js",
   "scripts": {
-    "start": "node --inspect=9229 app.js "
+    "start": "node app.js "
   },
   "dependencies": {
     "axios": "0.21.1",
