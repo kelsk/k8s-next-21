@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta4
+apiVersion: skaffold/v2beta22
 kind: Config
 build:
   artifacts:
@@ -6,22 +6,22 @@ build:
     context: src/backend
     sync:
       infer:
-        - '*.py'
+      - '*.py'
   - image: nextbook-frontend
-    buildpack:
-      builder: gcr.io/buildpacks/builder:v1
     context: src/frontend
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
 deploy:
   kubectl:
     manifests:
     - ./kubernetes-manifests/*.service.yaml
     - ./kubernetes-manifests/*.deployment.yaml
 profiles:
-  - name: prod
-    test:
-      - image: nextbook-backend
-        structureTests: 
-          - ./structure-test/backend-test.yaml
-      - image: nextbook-frontend
-        structureTests:
-          - ./structure-test/frontend-test.yaml
+- name: prod
+  test:
+  - image: nextbook-backend
+    structureTests:
+    - ./structure-test/backend-test.yaml
+  - image: nextbook-frontend
+    structureTests:
+    - ./structure-test/frontend-test.yaml
