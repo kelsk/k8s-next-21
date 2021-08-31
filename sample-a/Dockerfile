@@ -1,5 +1,5 @@
 # Use base Python image from Docker Hub
-FROM go:3.8
+FROM python:3.8
 
 # Set the working directory to /app
 WORKDIR /app
