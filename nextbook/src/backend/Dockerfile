@@ -1,5 +1,5 @@
 # Use base Python image from Docker Hub
-FROM python:3.8
+FROM python:3.8 as base
 
 # Set the working directory to /app
 WORKDIR /app
@@ -13,8 +13,19 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 # Copy the rest of the working directory contents into the container at /app
 COPY . .
 
+##################
+FROM base as prod
+
+ENV FLASK_ENV=production
+
+# Run app.py when the container launches
+ENTRYPOINT ["python", "back.py"]
+
+##################
+FROM base as dev
+
 # Set to development mode to enable reloading
 ENV FLASK_ENV=development
 
-# Run app.py when the container launches
+# Run dev.py when the container launches
 ENTRYPOINT ["python", "back.py"]
