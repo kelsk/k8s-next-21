@@ -1,0 +1,6 @@
+schemaVersion: 2.0.0
+fileContentTests:
+  - name: 'Lint app.js for xxx statements'
+    path: 'workspace/app.js'
+    expectedContents: ['']
+    excludedContents: ['(xxx|XXX)']

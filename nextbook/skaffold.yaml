@@ -1,15 +1,41 @@
-apiVersion: skaffold/v2beta4
+apiVersion: skaffold/v2beta19
 kind: Config
 build:
   artifacts:
   - image: nextbook-backend
     context: src/backend
+    docker:
+      dockerfile: Dockerfile
+      target: prod
   - image: nextbook-frontend
-    buildpack:
-      builder: "gcr.io/buildpacks/builder:v1"
     context: src/frontend
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
 deploy:
   kubectl:
     manifests:
-    - ./kubernetes-manifests/*.service.yaml
-    - ./kubernetes-manifests/*.deployment.yaml
+    - ./kubernetes-manifests/*.yaml
+profiles:
+- name: dev
+  build:
+    artifacts:
+    - image: nextbook-backend
+      context: src/backend
+      docker:
+        dockerfile: Dockerfile
+        target: dev
+      sync:
+        infer:
+        - '*.py'
+    - image: nextbook-frontend
+      context: src/frontend
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+- name: prod
+  test:
+  - image: nextbook-backend
+    structureTests:
+    - ./structure-test/backend-test.yaml
+  - image: nextbook-frontend
+    structureTests:
+    - ./structure-test/frontend-test.yaml

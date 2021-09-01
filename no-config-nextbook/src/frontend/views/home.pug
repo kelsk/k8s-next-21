@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Nextbook
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', href='assets/kubernetes-engine-icon.png', type='image/png')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+    body
+        .header
+            .container
+                .image-container: img(src='assets/KE-hello-world.svg' alt='A group celebrating')
+                h1 Nextbook
+                .message Nextbook is a demo application with a Node.js frontend and Python backend. It's made to be used with Cloud Code to demonstrate best practices when deploying a Kubernetes application.
+        //- We may not want a "What's next?" section for our demo
+        //- .container
+        //-     h3 What's next?
+        //-     ul
+        //-         li.next LINK
+        //-         li.next LINK
+        //-         li.next LINK
+        .container
+            h3 Try out the service by posting a message below!
+        .container.posts.mt-0
+            include input.pug
+            include output.pug

@@ -1,0 +1,33 @@
+{
+    "metadata": {
+        "version": "1"
+    },
+    "templates": [
+        {
+            "path": "nextbook",
+            "name": "Nextbook",
+            "description": "A Node.js & Python app showcasing Kubernetes best practices"
+        },
+        {
+            "path": "no-config-nextbook",
+            "name": "No-Config Nextbook",
+            "description": "Nextbook without Kubernetes resources, for demo purposes"
+        },
+        {
+            "path": "sample-a",
+            "name": "Sample A",
+            "description": "A template for a project"
+        },
+        {
+            "path": "sample-b",
+            "name": "Sample B",
+            "description": "Another template for a project"
+        },
+        {
+            "path": "required-config",
+            "name": "My Org's Required Config",
+            "description": "A project set up with my org's required configurations"
+        }
+ 
+    ]
+}

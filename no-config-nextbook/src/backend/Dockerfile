@@ -18,7 +18,7 @@ FROM base as prod
 
 ENV FLASK_ENV=production
 
-# Run back.py when the container launches
+# Run app.py when the container launches
 ENTRYPOINT ["python", "back.py"]
 
 ##################
@@ -27,5 +27,5 @@ FROM base as dev
 # Set to development mode to enable reloading
 ENV FLASK_ENV=development
 
-# Run back.py when the container launches
+# Run dev.py when the container launches
 ENTRYPOINT ["python", "back.py"]
