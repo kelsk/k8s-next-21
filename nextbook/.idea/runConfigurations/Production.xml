@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+  <configuration default="false" name="Production" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
     <option name="allowRunningInParallel" value="false" />
     <option name="buildEnvironment" value="Local" />
     <option name="builders">
@@ -13,7 +13,7 @@
     <option name="deployToMinikube" value="false" />
     <option name="envVariables" />
     <option name="imageRepositoryOverride" />
-    <option name="kubernetesContext" value="gke_abbycar-project_us-east1-b_test-cluster" />
+    <option name="kubernetesContext" />
     <option name="mappings">
       <list />
     </option>
