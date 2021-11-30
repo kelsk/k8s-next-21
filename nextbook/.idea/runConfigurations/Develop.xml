@@ -12,6 +12,8 @@
     <option name="deployToCurrentContext" value="false" />
     <option name="deployToMinikube" value="false" />
     <option name="envVariables" />
+    <option name="imageRepositoryOverride" />
+    <option name="kubernetesContext" />
     <option name="mappings">
       <list />
     </option>
