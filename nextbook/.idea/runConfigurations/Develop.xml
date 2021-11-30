@@ -12,8 +12,6 @@
     <option name="deployToCurrentContext" value="false" />
     <option name="deployToMinikube" value="false" />
     <option name="envVariables" />
-    <option name="imageRepositoryOverride" value="gcr.io/abbycar-project" />
-    <option name="kubernetesContext" value="gke_abbycar-project_us-central1-c_dev-cluster" />
     <option name="mappings">
       <list />
     </option>
