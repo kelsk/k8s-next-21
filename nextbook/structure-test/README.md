@@ -6,7 +6,7 @@ To add container structure tests to the Nextbook app:
 1. Download the latest container-structure-test [binary](https://github.com/GoogleContainerTools/container-structure-test/releases).
 
 
-2. Run Nextbook using the `prod` skaffold profile to run the container structure tests.
+2. Run Nextbook using the `test` skaffold profile to run the container structure tests.
 
     ```
     test:

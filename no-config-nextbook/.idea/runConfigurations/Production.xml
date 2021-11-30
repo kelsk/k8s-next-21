@@ -29,7 +29,7 @@
       <list />
     </option>
     <option name="skaffoldNamespace" />
-    <option name="skaffoldProfile" value="prod" />
+    <option name="skaffoldProfile" value="test" />
     <option name="skaffoldWatchMode" value="ON_DEMAND" />
     <option name="statusCheck" value="true" />
     <option name="verbosity" value="WARN" />

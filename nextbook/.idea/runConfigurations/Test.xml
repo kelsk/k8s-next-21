@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Production" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+  <configuration default="false" name="Testing" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
     <option name="allowRunningInParallel" value="false" />
     <option name="buildEnvironment" value="Local" />
     <option name="builders">
@@ -29,7 +29,7 @@
       <list />
     </option>
     <option name="skaffoldNamespace" />
-    <option name="skaffoldProfile" value="prod" />
+    <option name="skaffoldProfile" value="test" />
     <option name="skaffoldWatchMode" value="ON_DEMAND" />
     <option name="statusCheck" value="true" />
     <option name="verbosity" value="WARN" />

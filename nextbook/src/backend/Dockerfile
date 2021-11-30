@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 ##################
-FROM base as prod
+FROM base as test
 
 ENV FLASK_ENV=production
 

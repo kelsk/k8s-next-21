@@ -6,7 +6,7 @@ build:
     context: src/backend
     docker:
       dockerfile: Dockerfile
-      target: prod
+      target: test
   - image: nextbook-frontend
     context: src/frontend
     buildpacks:
@@ -31,7 +31,7 @@ profiles:
       context: src/frontend
       buildpacks:
         builder: gcr.io/buildpacks/builder:v1
-- name: prod
+- name: test
   test:
   - image: nextbook-backend
     structureTests:
