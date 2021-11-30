@@ -95,6 +95,10 @@ p {
         color:white;
     }
 
+	.card-body {
+                color: #555555;
+    }
+
 	a {
 		color: #8AB4F8;
     }
